@@ -2,10 +2,14 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(page_title="AI & Jobs", layout="centered")
-
-st.title("Як штучний інтелект змінює сферу праці")
-st.write("Цей сайт досліджує, які професії в зоні ризику автоматизації, і що з цим робити.")
-
+st.markdown(
+    """
+    <h1 style='color:#87CEFA;'>Як штучний інтелект змінює сферу праці</h1>
+    <p style='color:#708090; font-size:20px;'>Цей сайт створений на основі наукового дослідження, проведеного шістьма дівчатами в рамках проєкту ReuseScience. Ми провели ґрунтовний аналіз, зробили опитування та вивчили багато інших даних, щоб дослідити ризики автоматизації різних професій.</p>
+    <h3 style='color:#00CED1;'>Дослідження ризиків автоматизації професій</h3>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
@@ -45,7 +49,7 @@ if '-' in advice:
     advice_formatted = f"**{bold_part.strip()}** - {rest.strip()}"
 else:
     advice_formatted = advice
-    
+
 st.markdown(
     f"""
     <div style="background-color:#1b263b;padding:15px;border-radius:10px;margin-top:10px">
